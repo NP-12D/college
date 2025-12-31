@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+main section {
+  min-height: 100%;
+  flex: 1;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+h2 {
+  text-align: center;
+}
+.meetus div {
+  width: 50%;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+.meetus,
+.form form {
+  padding: 40px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.meetus {
+  background-color: #e5e5e5;
+}
+.meetus div,
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input {
+  height: 40px;
+  padding: 10px;
+  background-color: #e5e5e5;
+  border: none;
+}
+textarea {
+  resize: none;
+  height: 100px;
+  background-color: #e5e5e5;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+h3 {
+  text-transform: capitalize;
+  font-size: 24px;
+}
+a:hover {
+  color: #ff1c84;
+}
+
+button {
+  background-color: #ff1c84;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+}
+@media screen and (max-width: 750px) {
+  main {
+    flex-wrap: wrap;
+  }
+  main .form form {
+    width: 100%;
+  }
+  .iframe {
+    min-width: 50%;
+  }
+  .meetus {
+    width: 50%;
+  }
+  main {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  section {
+    width: 100% !important;
+  }
+}
