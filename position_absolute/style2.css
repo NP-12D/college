@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+main {
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+}
+main {
+  height: 100vh;
+  background-image: url(https://www.robotbutt.com/wp-content/uploads/2024/01/Football-Field-50-Yard-Line.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container {
+  width: 50%;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.avtor {
+  width: 100%;
+  position: relative;
+}
+
+.avtor p {
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+}
+a {
+  color: #c11d3e;
+  text-decoration: none;
+}
+.button {
+  background-color: #c11d3e;
+  padding: 10px;
+  width: 20%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+.button:hover{
+  scale: 1.1;
+}
+.red.white img{
+rotate: -90deg;
+}
+a:hover{
+text-decoration: underline;
+}
+.red {
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.white {
+  width: 40px;
+  height: 40px;
+  background-color: #c11d3e;
+}
+@media screen and (max-width: 750px) {
+  .container {
+    width: 90%;
+    left: 5%;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}

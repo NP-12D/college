@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+main {
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+}
+main {
+  height: 100%;
+  background-image: url(https://assets.nicepagecdn.com/d2cc3eaa/460597/images/56-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.box_container {
+  width: 450px;
+  height: 300px;
+  position: absolute;
+  bottom: 20%;
+  right: 20%;
+}
+
+.box_black {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
+
+  background-color: rgb(43, 41, 41);
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  z-index: 9999;
+  animation: rotate 1.5s ease-in-out;
+}
+@keyframes rotate {
+  from {
+    opacity: 0;
+    transform: translateX(-400px) translateY(-400px) rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) translateY(0%) rotate(0deg);
+  }
+}
+.box_orange {
+  width: 60%;
+  height: 80%;
+  position: absolute;
+  left: -40px;
+  top: -40px;
+  background-color: orange;
+  animation: movetop 1.5s ease-in forwards;
+}
+@keyframes movetop {
+  from {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.box_green {
+  width: 60%;
+  height: 80%;
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  background-color: rgb(44, 134, 16);
+  animation: movebottom 1.5s ease-in forwards;
+}
+@keyframes movebottom {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 25px;
+}
+p {
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 750px) {
+  .box_container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .box_container {
+    width: 60%;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .box_green {
+    height: 200px;
+  }
+  .box_orange {
+    height: 200px;
+  }
+}
