@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+main {
+  width: 100%;
+}
+.card_container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+.card a {
+  color: black;
+  text-decoration: none;
+}
+.card a:hover {
+  color: #999999;
+}
+.card p:nth-of-type(1) {
+  width: 90%;
+
+  color: #999999;
+}
+.card_container .card:first-child,
+.card_container .card:nth-of-type(4) {
+  animation: movetoright 2s ease;
+}
+.card_container .card:last-child,
+.card_container .card:nth-of-type(3) {
+  animation: movetoleft 2s ease;
+}
+@keyframes movetoright {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes movetoleft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.card_container .card:nth-of-type(2) {
+  animation: movefromtop 2s ease;
+}
+@keyframes movefromtop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.card_container .card:nth-of-type(5) {
+  animation: movefrombottom 2s ease;
+}
+@keyframes movefrombottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.card_container .card:first-child {
+  background-image: url(https://assets.nicepagecdn.com/11a8ddce/6167870/images/3384961_57957.jpg);
+}
+.card_container .card:nth-of-type(3) {
+  background-image: url(https://assets.nicepagecdn.com/11a8ddce/6167870/images/3601281_67058.jpg);
+}
+.card_container .card:nth-of-type(5) {
+  background-image: url(https://assets.nicepagecdn.com/11a8ddce/6167870/images/realistic_vinyl_cover_and_di1sc_cover_mockup.jpg);
+}
+.card_container .card:nth-of-type(5),
+.card_container .card:nth-of-type(3),
+.card_container .card:first-child {
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+}
+@media screen and (max-width: 750px) {
+  .card_container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card_container .card:nth-of-type(2) {
+    animation: movetoleft 2s ease;
+  }
+  .card_container .card:nth-of-type(5) {
+    animation: movetoright 2s ease;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card_container {
+    grid-template-columns: 1fr;
+  }
+}
